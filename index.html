@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Parkour Runner</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Google Fonts for a retro game feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="game-screen active">
+            <h1>PARKOUR RUNNER</h1>
+            <button id="startButton">START GAME</button>
+            <button id="tutorialButton">TUTORIAL</button>
+            <button id="skinsButton">SKINS</button>
+        </div>
+
+        <!-- Tutorial Screen -->
+        <div id="tutorial-screen" class="game-screen">
+            <h2>TUTORIAL</h2>
+            <p id="tutorial-message">Welcome! Learn how to parkour!</p>
+            <div id="tutorial-controls">
+                <p><strong>PC:</strong> ↑ Arrow Key / W / Space to Jump</p>
+                <p><strong>PC:</strong> ↓ Arrow Key / S to Slide</p>
+                <p><strong>Mobile:</strong> Use On-Screen Buttons</p>
+            </div>
+            <button id="nextTutorialButton" class="hidden">NEXT</button>
+            <button id="backFromTutorialButton">BACK TO HOME</button>
+        </div>
+
+        <!-- Skin Selection Screen -->
+        <div id="skins-screen" class="game-screen">
+            <h2>CHOOSE YOUR RUNNER</h2>
+            <div id="skin-selection">
+                <!-- Skins will be populated here by JavaScript -->
+            </div>
+            <button id="backToHomeFromSkinsButton">BACK TO HOME</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="main-game-screen" class="game-screen">
+            <canvas id="gameCanvas"></canvas>
+            <div id="ui-overlay">
+                <p>SCORE: <span id="scoreDisplay">0</span></p>
+                <p>HEALTH: <span id="healthDisplay">100</span></p>
+            </div>
+            <!-- Mobile Controls -->
+            <div id="mobile-controls">
+                <button id="jumpButton" class="control-button">JUMP</button>
+                <button id="slideButton" class="control-button">SLIDE</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="game-screen">
+            <h1>GAME OVER!</h1>
+            <p>FINAL SCORE: <span id="finalScoreDisplay">0</span></p>
+            <button id="restartButton">PLAY AGAIN</button>
+            <button id="backToHomeFromGameOverButton">BACK TO HOME</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
